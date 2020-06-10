@@ -1,0 +1,50 @@
+
+<div id="container">
+    <form name="formulaire">
+     
+        <h1>créer une demande d'ouverture de flux </h1><br>
+
+        <label><b>cadre de la demande :</b></label>
+        <input type="text"  name="demande" required>
+
+        <label><b>Adresse source :</b></label>
+        <input type="text" name="adresseS" required>
+        <label><b>Adresse destinataire :</b></label>
+        <input type="text" name="adresseD" required>
+        <label><b>Port :</b></label>
+        <input type="text" name="port" required>
+        <label><b>Durée :</b></label>
+        <input type="text" name="durée" required>
+        <label><b>Description :</b></label>
+        <input type="text" name="description" required>
+        <label><b>Flux interne :</b></label>
+        <div>
+            <label>OUI</label>
+            <input type="checkbox" id="oui" name="oui">
+            <label>NON</label>
+            <input type="checkbox" id="non" name="non">
+        </div>
+        <label><b>Flux externe :</b></label>
+        <div>
+            <label>OUI</label>
+            <input type="checkbox" id="oui" name="oui">
+            <label>NON</label>
+            <input type="checkbox" id="non" name="non">
+        </div>
+
+        <label><b>Partenaire :</b></label>
+        <input type="text" name="partenaire" required>
+        <label><b>Fichier échangé :</b></label>
+        <input type="text" name="fichier" required>
+        <label><b>Périodicité :</b></label>
+        <input type="text" name="periodicité" required>
+        <label><b>Nature de l'échange :</b></label>
+        <input type="text" name="nature" required>
+        <label><b>Commentaire :</b></label>
+        <input type="text" name="commentaire" required>
+
+        <button class="btn btn-success" (click)="confirm()">Valider</button>
+          
+        
+    </form>
+</div>

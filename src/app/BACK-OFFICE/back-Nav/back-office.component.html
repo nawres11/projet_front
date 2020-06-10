@@ -1,0 +1,61 @@
+<!--<div class="container">
+  <nav  style="width:100%;left:0;border-radius:0px;padding-top:10px;position: fixed" class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/admin/categories" class="btn btn-info" role="button" routerLinkActive="active">Categories</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="/admin/products" class="btn btn-info" role="button" routerLinkActive="active">Products</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="/admin/users" class="btn btn-info" role="button" routerLinkActive="active">Users</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;">
+        <a routerLink="/admin/orders" class="btn btn-info" role="button" routerLinkActive="active">Orders</a>
+      </li>
+      <li class="nav-item" style="margin-left: 10px;margin-top: 2px">
+      <button style="height: 99%;padding-top: -7px"  class="btn btn-danger" (click)="logOut()"><span style="margin-right: 10px;" class="glyphicon glyphicon-log-out"></span>Sign out</button>
+      </li>
+    </ul>
+  </nav>
+
+  <hr/>
+</div>-->
+
+<nav id="nav" style="display:flex;border-radius:0px;position: fixed;width:100%;z-index:666666 " class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
+
+  <div class="container-fluid">
+    <img src="../../assets/images/téléchargement.jpg" routerLink="/"  height="80px" style="margin-left:15px;cursor:pointer"/>
+   
+    <button class="navbar-toggler" type="button" style="margin-left: 30px" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <br/>
+    <br/>
+    <div  style="width:100%;height:100%"  class="collapse navbar-collapse" id="navbarResponsive">
+      <ul style="float:right" class=" navbar-nav ml-auto">
+
+      <li class="nav-item">
+          <a class="nav-link"  routerLink="/">Home</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link"  routerLink="/admin/ServerList">Gestion des serveurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/admin/FluxList">Gestion des flux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/admin/dashboard">Tableau de bord</a>
+        </li>
+        <li class="nav-item" style="margin-left: 10px;margin-top: 2px">
+          <button style="height: 99%;padding-top: -7px"  class="btn btn-danger" (click)="logOut()"><span style="margin-right: 10px;" class="glyphicon glyphicon-log-out"></span>Sign out</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>    
+
+
+  
+
+
