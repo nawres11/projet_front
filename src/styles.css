@@ -136,13 +136,13 @@ footer a:hover{
   background-color: rgb(50, 55, 65);
 }
 .btn-danger{
-  background-color: rgb(2,179,228) !important;
-  border-color: rgb(2,179,228) !important;
+  background-color:  rgb(221, 75, 57)!important;
+  border-color:  rgb(221, 75, 57) !important;
 }
 .btn-danger:hover{
   background-color: white !important;
-  border-color: rgb(2,179,228) !important;
-  color: rgb(2,179,228) ! important;
+  border-color:  rgb(221, 75, 57) !important;
+  color:  rgb(221, 75, 57) ! important;
 }
 .btn-floating{
   font-size: 3rem;

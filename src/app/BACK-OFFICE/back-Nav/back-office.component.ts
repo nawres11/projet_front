@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-
+import {AuthenticationService} from "../../services/auth/authentication.service";
 
 @Component({
   selector: 'app-back-office',
@@ -26,28 +26,19 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class BACKOFFICEComponent implements OnInit {
   title = 'Plateforme UIB';
-  constructor(private rout: Router) { }
+  constructor(private router: Router,private auth: AuthenticationService) { }
+
   private isOnP: boolean;
-
+  
   ngOnInit() {
-    this.isOnP = true;
+   
   }
-
-  hideShowPan(x) {
-    if (x === 1) {
-      this.isOnP = false;
-
-    } else {
-
-      this.isOnP = true;
-    }
-
-  }
-
-  logOut() {
-    localStorage.removeItem('token');
-    this.rout.navigate(['/']);
-  }
+  
+   logOut(){
+      this.auth.loggedOut();
+      
+   }
+ 
 
 
 }

@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 export class ServerListComponent implements OnInit {
   
   
-  servers: Observable<any>;
+  servers: any=[];
   server: Serveur;
   id: number;
   public showAddServer: boolean;
@@ -39,18 +39,19 @@ export class ServerListComponent implements OnInit {
     this.id = id;
     this.showDetails = true;
     this.blurAll = true;
+    this.router.navigate(['admin/details']);
   }
   updateServer(id: number) {
     this.id = id;
     this.reloadData();
     this.showModifServer = true;
     this.blurAll = true;
-    this.router.navigate(['./update']);
+    this.router.navigate(['admin/update']);
   }
   addServer() {
     this.showAddServer = true;
     this.blurAll = true;
-    this.router.navigate(['./addServer']);
+    this.router.navigate(['admin/addServer']);
   }
 
   closeAdd() {

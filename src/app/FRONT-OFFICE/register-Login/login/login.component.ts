@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
       console.log( this.auth.isAdmin());
       console.log( this.auth.isAuthentified());
       if (!this.panParent) {
-     if (this.auth.isUser()) {this.router.navigate(['/']); }
-     if (this.auth.isAdmin()) {this.router.navigate(['/admin/']); }} else {
+      if (this.auth.isUser()) {this.router.navigate(['/']); }
+      if (this.auth.isAdmin()) {this.router.navigate(['/admin/']); }} else {
       this.closeAll.emit(true);
     }
     }, error => {

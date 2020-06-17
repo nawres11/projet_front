@@ -12,7 +12,7 @@ import {Observable} from "rxjs";
 
 
 export class AuthenticationService {
-  url = 'http://localhost:80';
+  url = 'http://localhost:82';
   jwt: string;
   email: string;
   roles: Array<string>;
@@ -63,9 +63,11 @@ export class AuthenticationService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    if (localStorage.getItem('token')) {
+    return true;
   }
-
+  return false;
+}
   loggedOut() {
     localStorage.removeItem('token');
     this.email = '';

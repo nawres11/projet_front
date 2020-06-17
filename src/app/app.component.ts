@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,ElementRef, ViewChild} from '@angular/core';
 import {slider,Animation,fader} from './FRONT-OFFICE/animation/route-animation';
 import {RouterOutlet} from '@angular/router';
 

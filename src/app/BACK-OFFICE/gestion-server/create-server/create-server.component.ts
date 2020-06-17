@@ -31,15 +31,19 @@ export class CreateServerComponent implements OnInit {
   
   save() {
     
-      this.serverService.createServer(this.server, this.server.id_serveur)
+      this.serverService.createServer(this.server).subscribe(data => console.log(data), error1 => console.log(error1));
       this.server = new Serveur();
-      this.serverService.getServers().subscribe(data => this.serversList = data, error =>console.log(error));
-
+      this.goToList();
     } 
   
   closeThis() {
     this.submitted = true;
     this.save();
     this.closeAll.emit(true);
+  }
+  
+  goToList() {
+    this.serverService.getServers();
+    this.router.navigate(['admin/ServerList']);
   }
 }

@@ -1,3 +1,4 @@
+<app-back-office></app-back-office>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -5,7 +6,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<div class="panel panel-primary" style="margin-top:150px" [ngStyle]="{'filter':showHideImg ? 'blur(4px)' : 'none' }">
+<div class="panel panel-primary" style="margin-top:150px">
   <div style="background-color: rgb(52,58,64)" class="panel-heading">
     <h2>Server List</h2>
     <button (click)="addServer()" class="btn btn-success" style="margin-left: 10px; float: right; margin-top: -45px">Ajouter</button>
@@ -20,11 +21,11 @@
         <th>Actions</th>
       </tr>
       </thead>
-     <!-- <tr *ngFor="let server of servers">-->
+       
+    <!--<tr *ngFor="let server of servers">-->
        <tr>
         <td>{{server.id_serveur}}</td>
         <td>{{server.intitule}}</td>
-    
         <td style="width: 180px">
           <button (click)="details(server.id_serveur)" class="btn btn-dark" style="margin-left: 10px"><span class="glyphicon glyphicon-th-list"></span></button>
           <button (click)="updateServer(server.id_serveur)" class="btn btn-info" style="margin-left: 10px"><span class="glyphicon glyphicon-pencil"></span></button>

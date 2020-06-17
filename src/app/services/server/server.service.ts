@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ServerService {
   
-  private baseUrl = 'http://localhost:8080/rest/servers';
+  private baseUrl = 'http://localhost:82/rest/servers';
 
   constructor(private http: HttpClient) {
   }
@@ -19,11 +19,11 @@ export class ServerService {
   getServertById(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
-  createServer(server: object, id: number): Observable<object> {
-    return this.http.post(`${this.baseUrl}/${id}`,server);
+
+  createServer(server: object): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, server);
   }
-  
-  updateServer(id: number, value: any): Observable<object> {
+  updateServer(id: number, value: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
   

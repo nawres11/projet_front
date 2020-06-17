@@ -15,14 +15,13 @@ import {DashbordComponent} from './BACK-OFFICE/dashbord/dashbord.component';
 const routes: Routes = [
   {path : '' , component: HomeComponent},
   {path : 'Login', component: RegisterLoginComponent},
-  {path : 'admin', component: BACKOFFICEComponent},
-  {path : 'ServerList', component: ServerListComponent},
-  {path : 'addServer', component: CreateServerComponent},
-  {path : 'update/:id', component: UpdateComponent},
-  {path : 'details/:id', component: ServerDetailsComponent},
-  {path : 'FluxList', component: FluxListComponent},
-  {path : 'addFlux', component: CreateOpeningRequestComponent},
-  {path : 'dashboard', component: DashbordComponent},
+  {path : 'admin/ServerList', component: ServerListComponent},
+  {path : 'admin/addServer', component: CreateServerComponent},
+  {path : 'admin/update/:id', component: UpdateComponent},
+  {path : 'admin/details/:id', component: ServerDetailsComponent},
+  {path : 'admin/FluxList', component: FluxListComponent},
+  {path : 'admin/addFlux', component: CreateOpeningRequestComponent},
+  {path : 'admin/dashboard', component: DashbordComponent},
 
 ];
 

@@ -35,6 +35,8 @@ import { FluxListComponent } from './BACK-OFFICE/gestion-flux/flux-list/flux-lis
 import { CreateOpeningRequestComponent } from './BACK-OFFICE/gestion-flux/create-opening-request/create-opening-request.component';
 import {httpInterceptorProviders} from './services/auth/auth-interceptor';
 import { DashbordComponent } from './BACK-OFFICE/dashbord/dashbord.component';
+import { OpeningRequestComponent } from './BACK-OFFICE/gestion-flux/opening-request/opening-request.component';
+
 
 
 
@@ -57,7 +59,8 @@ import { DashbordComponent } from './BACK-OFFICE/dashbord/dashbord.component';
     UpdateComponent,
     FluxListComponent,
     CreateOpeningRequestComponent,
-    DashbordComponent
+    DashbordComponent,
+    OpeningRequestComponent
 
 
   ],
