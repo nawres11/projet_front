@@ -12,9 +12,11 @@ export class ServerService {
   constructor(private http: HttpClient) {
   }
 
-  getServers(): Observable<any> {
+  servers:any=[];
+  getServers(){
 
     return this.http.get(`${this.baseUrl}`);
+    
   }
   getServertById(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);

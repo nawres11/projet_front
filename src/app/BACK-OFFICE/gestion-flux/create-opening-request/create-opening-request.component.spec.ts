@@ -8,7 +8,8 @@ describe('CreateOpeningRequestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateOpeningRequestComponent ]
+      declarations: [ CreateOpeningRequestComponent ],
+    
     })
     .compileComponents();
   }));

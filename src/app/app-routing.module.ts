@@ -8,20 +8,28 @@ import{UpdateComponent} from './BACK-OFFICE/gestion-server/update/update.compone
 import{ServerDetailsComponent} from'./BACK-OFFICE/gestion-server/server-details/server-details.component';
 import {FluxListComponent} from './BACK-OFFICE/gestion-flux/flux-list/flux-list.component';
 import {CreateOpeningRequestComponent} from './BACK-OFFICE/gestion-flux/create-opening-request/create-opening-request.component';
+import {OpeningRequestComponent} from './BACK-OFFICE/gestion-flux/opening-request/opening-request.component';
 import {BACKOFFICEComponent} from './BACK-OFFICE/back-Nav/back-office.component';
 import {DashbordComponent} from './BACK-OFFICE/dashbord/dashbord.component';
 
 
 const routes: Routes = [
-  {path : '' , component: HomeComponent},
-  {path : 'Login', component: RegisterLoginComponent},
+  
+  {path : '', component: RegisterLoginComponent},
+  {path :'Login', component: RegisterLoginComponent},
+  {path : 'user/ServerList', component: ServerListComponent},
+  {path : 'admin', component: DashbordComponent},
+  {path : 'user', component: DashbordComponent},
   {path : 'admin/ServerList', component: ServerListComponent},
   {path : 'admin/addServer', component: CreateServerComponent},
   {path : 'admin/update/:id', component: UpdateComponent},
   {path : 'admin/details/:id', component: ServerDetailsComponent},
+  {path : 'user/FluxList', component: FluxListComponent},
+  {path : 'user/addFlux', component: CreateOpeningRequestComponent},
   {path : 'admin/FluxList', component: FluxListComponent},
   {path : 'admin/addFlux', component: CreateOpeningRequestComponent},
-  {path : 'admin/dashboard', component: DashbordComponent},
+  {path : 'admin/validate', component: OpeningRequestComponent},
+  {path : 'admin/dashboard', component:DashbordComponent },
 
 ];
 

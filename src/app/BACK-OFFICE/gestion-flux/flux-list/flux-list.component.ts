@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
 })
 export class FluxListComponent implements OnInit {
   
-  fluxs: Observable<any>;
+  fluxs:any=[];
   flux: Flux;
   server: Serveur;
   id: number;

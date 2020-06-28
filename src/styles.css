@@ -121,11 +121,11 @@ html, body{
 }
 
 footer{
-  background-color: rgb(62,69,81);
-  color: white;
+  background-color: whitesmoke;
+  color: black;
 }
 footer a{
-  color: white;
+  color: black;
 }
 footer a:hover{
   color: rgb(2,179,228);
@@ -133,7 +133,7 @@ footer a:hover{
 }
 .footer-copyright
 {
-  background-color: rgb(50, 55, 65);
+  background-color: whitesmoke;
 }
 .btn-danger{
   background-color:  rgb(221, 75, 57)!important;
@@ -150,11 +150,9 @@ footer a:hover{
 }
 .btn-tw
 {
-  color: #1da1f2! important;
+  color: #b32342! important;
 }
-.btn-fb{
-  color: #3C5A99 ! important;
-}
+
 .btn-gplus{
   color: rgb(221, 75, 57)! important;
 }

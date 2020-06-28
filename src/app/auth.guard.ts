@@ -44,3 +44,4 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     return true;
   }
 }
+/*ajouter a app.routing*/

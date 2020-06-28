@@ -11,10 +11,10 @@ import {Router} from '@angular/router';
 })
 export class CreateServerComponent implements OnInit {
 
-   @Output() closeAll = new EventEmitter<boolean>();
+  @Output() closeAll = new EventEmitter<boolean>();
   server: Serveur;
   submitted = false;
-  servers:Serveur[];
+  servers:any=[];
   serversList: Observable<any>
   constructor(private serverService: ServerService, private router: Router) {
   }

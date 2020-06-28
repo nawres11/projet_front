@@ -14,7 +14,7 @@ export class UpdateComponent implements OnInit {
   @Input()  id_serveur: number;
   idServer:number;
   server: Serveur;
-  servers:Serveur[];
+  servers:any=[];
 
   constructor(private route: ActivatedRoute, private router: Router, private serverService: ServerService) {
   }

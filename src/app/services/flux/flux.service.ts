@@ -8,11 +8,10 @@ import {ServerService} from '../server/server.service';
 export class FluxService {
 
   private baseUrl = 'http://127.0.0.1:82/rest/fluxs';
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
 
-  }
-  getFluxs(): Observable<any> {
-
+  fluxs:any=[];
+  getFluxs(){
     return this.http.get(`${this.baseUrl}`);
   }
   createFlux(flux: object, id_serveur: number): Observable<object> {

@@ -28,6 +28,6 @@ export class ServerDetailsComponent implements OnInit {
 }
 
 list() {
-  this.router.navigate(['/admin/ServerList']);
+  this.router.navigate(['/ServerList']);
 }
 }

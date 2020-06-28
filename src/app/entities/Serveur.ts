@@ -1,4 +1,5 @@
 export class Serveur {
+    Serveur:[];
     id_serveur: number;
     intitule: string;
     port: string;

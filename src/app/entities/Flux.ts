@@ -1,5 +1,6 @@
 export  class Flux{ 
       
+      Flux:[];
       id_flux:number;
 	type_flux:String;
 	port:number;
@@ -10,4 +11,5 @@ export  class Flux{
 	dateOuverture:number;
       natureEchange:String;
       description:String;
+      intitule:String;
 }

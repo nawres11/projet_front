@@ -32,18 +32,18 @@ table{
 
 }
 .btn-link{
-  background-color: transparent;
-  color:grey;
+  background-color:black;
+  color:rgb(194, 194, 194);
 }
 .btn-outline-light{
   border: none;
   padding-top: 7px;
-  color:rgb(104, 100, 100);
+  color:gray;;
   font-size: 20px
 }
 .btn-outline-light:hover{
-  color: white;
-  background-color: transparent;
+  color: gray;
+  background-color:transparent ;
 }
 .list-viewer-wrapper{
   border-color: black;
@@ -53,6 +53,7 @@ table{
 }
 mat-button-toggle-group{
   margin-top: 13px;
+  
 }
 
 

@@ -15,25 +15,26 @@ import {
   MatGridListModule,
   MatIconModule, MatNativeDateModule,
   MatRadioModule,
-  MatSelectModule
+  MatSelectModule,MatTooltipModule
 } from '@angular/material';
-import {LoginComponent} from './FRONT-OFFICE/register-Login/login/login.component';
-import {RegisterComponent} from './FRONT-OFFICE/register-Login/register/register.component';
-import {RegisterLoginComponent} from './FRONT-OFFICE/register-Login/register-login.component';
-import {MaterialModule} from './material.module';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
-import {ShowHidePasswordModule} from 'ngx-show-hide-password';
-import {MatPassToggleVisibilityComponent, MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
-import {DialogComponent} from './FRONT-OFFICE/register-Login/dialog.component';
-import {BACKOFFICEComponent} from './BACK-OFFICE/back-Nav/back-office.component';
-import {ServerListComponent} from './BACK-OFFICE/gestion-server/server-list/server-list.component';
+
+import { LoginComponent} from './FRONT-OFFICE/register-Login/login/login.component';
+import { RegisterComponent} from './FRONT-OFFICE/register-Login/register/register.component';
+import { RegisterLoginComponent} from './FRONT-OFFICE/register-Login/register-login.component';
+import { MaterialModule} from './material.module';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
+import { ShowHidePasswordModule} from 'ngx-show-hide-password';
+import { MatPassToggleVisibilityComponent, MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
+import { DialogComponent} from './FRONT-OFFICE/register-Login/dialog.component';
+import { BACKOFFICEComponent} from './BACK-OFFICE/back-Nav/back-office.component';
+import { ServerListComponent} from './BACK-OFFICE/gestion-server/server-list/server-list.component';
 import { CreateServerComponent } from './BACK-OFFICE/gestion-server/create-server/create-server.component';
 import { ServerDetailsComponent } from './BACK-OFFICE/gestion-server/server-details/server-details.component';
 import { UpdateComponent } from './BACK-OFFICE/gestion-server/update/update.component';
 import { FluxListComponent } from './BACK-OFFICE/gestion-flux/flux-list/flux-list.component';
 import { CreateOpeningRequestComponent } from './BACK-OFFICE/gestion-flux/create-opening-request/create-opening-request.component';
-import {httpInterceptorProviders} from './services/auth/auth-interceptor';
+import { httpInterceptorProviders} from './services/auth/auth-interceptor';
 import { DashbordComponent } from './BACK-OFFICE/dashbord/dashbord.component';
 import { OpeningRequestComponent } from './BACK-OFFICE/gestion-flux/opening-request/opening-request.component';
 
@@ -79,6 +80,7 @@ import { OpeningRequestComponent } from './BACK-OFFICE/gestion-flux/opening-requ
     MatDatepickerModule,
     MatButtonToggleModule,
     MatRadioModule,
+    MatTooltipModule,
     RecaptchaModule,
     RecaptchaFormsModule,
     ReactiveFormsModule,

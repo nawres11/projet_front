@@ -14,12 +14,13 @@ export class AuthInterceptor implements HttpInterceptor {
     console.log( 'login1== ', req);
 
     let authReq = req;
-    console.log(req.url);
+    //console.log(req.url);
 
     if (req.url === 'http://localhost:82/login' ||
       req.url === 'http://localhost:82/rest/register' ||
       req.url.substring(0, 33) === 'http://localhost:82/rest/servers' ||
-      req.url === 'http://localhost:82/rest/fluxs'  ) 
+      req.url === 'http://localhost:82/rest/fluxs'||
+       req.url === 'http://localhost:82/rest/projects' ) 
       {return next.handle(req); } 
      else {
       const token = this.auth.getToken() ;

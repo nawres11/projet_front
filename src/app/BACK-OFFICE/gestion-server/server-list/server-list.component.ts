@@ -4,6 +4,7 @@ import { Serveur} from '../../../entities/Serveur';
 import {ServerService} from '../../../services/server/server.service';
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-server-list',
   templateUrl: './server-list.component.html',
@@ -33,20 +34,22 @@ export class ServerListComponent implements OnInit {
 
     this.server = new Serveur();
     this.servers = this.serverService.getServers();
+    console.log(this.servers);
+    /*https://guide-angular.wishtack.io/angular/http/utilisation-de-httpclient */
   }
   
   details(id: number) {
     this.id = id;
     this.showDetails = true;
     this.blurAll = true;
-    this.router.navigate(['admin/details']);
+  
   }
   updateServer(id: number) {
     this.id = id;
     this.reloadData();
     this.showModifServer = true;
     this.blurAll = true;
-    this.router.navigate(['admin/update']);
+    
   }
   addServer() {
     this.showAddServer = true;
@@ -67,7 +70,7 @@ export class ServerListComponent implements OnInit {
       this.closeAdd();
     }
   }
-
+  
 
 }
 

@@ -27,7 +27,8 @@ table{
 }
 
 button{
-  background-color:gray;
+  background-color: rgb(139, 16, 16);
+  color:white;
 }
 .list-header-title{
   color:black;
@@ -37,16 +38,17 @@ button{
 
 .list-viewer-wrapper{
   margin-top: 60px;
-  border: 3px solid black ! important;
+  border: 3px solid rgb(70, 65, 65) ! important;
   border-radius: 15px ! important;
   border-bottom-left-radius: 50px ! important;
   border-bottom-right-radius: 50px ! important;
   padding: 20px;
-;background-color: white
+;background-color:white;
 }
 mat-button-toggle-group{
   margin-top: 13px;
 }
+
 
 
 
