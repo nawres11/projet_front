@@ -23,7 +23,7 @@ export class DashbordComponent implements OnInit {
   }  
   flux: any = [{ 
   Id:1,
-  Intitule: 'dhcp',
+  Intitule: 'dhcp1',
   Type:'externe',
   AdresseSource:'192.168.100.1',
 },
