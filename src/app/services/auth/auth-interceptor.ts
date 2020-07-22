@@ -14,7 +14,7 @@ export class AuthInterceptor implements HttpInterceptor {
     console.log( 'login1== ', req);
 
     let authReq = req;
-    //console.log(req.url);
+     console.log(req.url);
 
     if (req.url === 'http://localhost:82/login' ||
       req.url === 'http://localhost:82/rest/register' ||

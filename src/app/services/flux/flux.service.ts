@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {ServerService} from '../server/server.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +14,8 @@ export class FluxService {
   getFluxs(){
     return this.http.get(`${this.baseUrl}`);
   }
-  createFlux(flux: object, id_serveur: number): Observable<object> {
-    return this.http.post(`${this.baseUrl}/${id_serveur}`,flux);
+  createFlux(flux: object): Observable<object> {
+    return this.http.post(`${this.baseUrl}`,flux);
   }
   getServersList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/serversList`);

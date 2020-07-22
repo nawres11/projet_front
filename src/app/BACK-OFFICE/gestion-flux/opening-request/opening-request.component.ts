@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { Flux } from 'src/app/entities/Flux';
+import {FluxService} from'../../../services/flux/flux.service';
+
 
 @Component({
   selector: 'app-opening-request',
@@ -7,15 +10,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./opening-request.component.css']
 })
 export class OpeningRequestComponent implements OnInit {
-
-  constructor( private router: Router) { }
+  fluxs:Flux[];
+  constructor( private fluxService:FluxService,private router: Router) { }
 
   ngOnInit() {
+    
   }
 
-  submit() {
   
-    this.router.navigate(['admin/FluxList']);
-  }
   
 }

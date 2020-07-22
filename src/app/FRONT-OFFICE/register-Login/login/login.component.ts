@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   user: User;
   @Input() panParent: boolean;
   @Output() closeAll = new EventEmitter<boolean>();
+  
 
   constructor(private formBuilder: FormBuilder, private auth: AuthenticationService, private router: Router) { }
 
@@ -28,15 +29,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log('userComponent  ', this.user);
+    console.log('userComponent ', this.user);
     return this.auth.login(this.user).subscribe(r => {
       const jwt = r.headers.get('Authorization');
       this.auth.saveToken(jwt) ;
       console.log(this.auth.isUser());
       console.log( this.auth.isAdmin());
       console.log( this.auth.isAuthentified());
+
       if (!this.panParent) {
-      if (this.auth.isUser()) {this.router.navigate(['/user']); }
+      if (this.auth.isUser()) {this.router.navigate(['/user/']); }
       if (this.auth.isAdmin()) {this.router.navigate(['/admin/']); }} else {
       this.closeAll.emit(true);
     }

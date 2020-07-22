@@ -36,6 +36,9 @@ export class BACKOFFICEComponent implements OnInit {
   
    logOut(){
       this.auth.loggedOut();
+      this.router.navigate(['/Login']);
+
+
       
    }
  

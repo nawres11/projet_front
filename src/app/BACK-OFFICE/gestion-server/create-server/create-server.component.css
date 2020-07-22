@@ -10,13 +10,14 @@ form {
     height: 800px;
     padding: 30px;
     border: 1px solid #f1f1f1;
-    background: #fff;
+    background: rgba(189, 197, 197, 0.932);
 }
 #container h1{
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
     text-align: center;
+
 }
 
 /* Full-width inputs */
@@ -27,6 +28,7 @@ input[type=text] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    background-color: white;
 }
 
 select {
@@ -36,13 +38,13 @@ select {
 
 /* Set a style for all buttons */
 button{
-    background-color:rgb(12, 13, 20);
+    background-color:rgb(13, 138, 40);
     color: white;
     margin-top: 25px;
-    padding: 14px 20px;
+    padding: 10px 20px;
     text-align: center;
     border: none;
     cursor: pointer;
-    width:80px;
+    width:95px;
     
 }

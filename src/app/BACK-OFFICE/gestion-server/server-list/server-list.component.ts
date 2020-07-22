@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import { Serveur} from '../../../entities/Serveur';
 import {ServerService} from '../../../services/server/server.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute,Router} from '@angular/router';
 
 
 @Component({
@@ -23,7 +23,7 @@ export class ServerListComponent implements OnInit {
   showDetails: boolean;
   
 
-  constructor(private serverService: ServerService, private router: Router) {
+  constructor(private serverService: ServerService,private route: ActivatedRoute, private router: Router,) {
     this.router.events.subscribe((val) => {this.reloadData(); });
    }
 
@@ -35,19 +35,25 @@ export class ServerListComponent implements OnInit {
     this.server = new Serveur();
     this.servers = this.serverService.getServers();
     console.log(this.servers);
-    /*https://guide-angular.wishtack.io/angular/http/utilisation-de-httpclient */
+    
   }
   
   details(id: number) {
-    this.id = id;
+    this.serverService.getServertById(id);
     this.showDetails = true;
     this.blurAll = true;
+      this.id = this.route.snapshot.params['id'];
+      this.serverService.getServertById(id).subscribe(data => {
+        console.log(data);
+        this.server = data;
+      }, error1 => console.log(error1));
+    }
+    
   
-  }
+  
   updateServer(id: number) {
     this.id = id;
     this.reloadData();
-    this.showModifServer = true;
     this.blurAll = true;
     
   }

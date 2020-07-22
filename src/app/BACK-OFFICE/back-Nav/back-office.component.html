@@ -13,10 +13,12 @@
           <a class="nav-link"  routerLink="/admin/dashboard" routerLinkActive="active">Tableau de bord</a>
         </li>
         <li class="nav-item" style="margin-left: 10px;margin-top: 2px">
-         <button style="height: 99%;padding-top: -7px" routerLink="/Login" class="btn btn-danger mb- 2" (click)="logOut()" ><span style="margin-right: 10px;" class="glyphicon glyphicon-log-out"></span>Déconnexion</button>
-      
-      <!--  <button style="height: 99%;padding-top: -7px"  class="btn btn-danger mb- 2" data-toggle="modal" data-target="#myModal">Sign out</button>
-          
+        <!-- <button style="height: 99%;padding-top: -7px" routerLink="/Login" class="btn btn-danger mb- 2" (click)="logOut()" ><span style="margin-right: 10px;" class="glyphicon glyphicon-log-out"></span>Déconnexion</button>
+        -->
+       <button style="height: 99%;padding-top: -7px"  class="btn btn-danger mb- 2" data-toggle="modal" data-target="#myModal">Déconnexion</button>
+      </li>
+    </ul> 
+  </nav>      
     <div class="modal" id="myModal">
      <div class="modal-dialog">
       <div class="modal-content" >
@@ -27,16 +29,14 @@
        </div>
 
          <div class="modal-footer" data-target="#myModal2">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-success" data-dismiss="modal" routerLink="/Login"  (click)="logOut()" >Logout</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal"(click)="logOut()" >Déconnecter</button>
         </div>
 
       </div>
     </div>
-  </div>-->
-  </li>
-</ul> 
-</nav>
+  </div>
+
 </div>
  
 

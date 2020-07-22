@@ -19,16 +19,10 @@ export class CreateServerComponent implements OnInit {
   constructor(private serverService: ServerService, private router: Router) {
   }
  
-
-
-  ngOnInit() {
+   ngOnInit() {
     this.submitted = false;
-    this.server= new Serveur();
-     
-    
+    this.server= new Serveur();  
     }
-  
-  
   save() {
     
       this.serverService.createServer(this.server).subscribe(data => console.log(data), error1 => console.log(error1));

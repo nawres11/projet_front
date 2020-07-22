@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   constructor(private auth: AuthenticationService, private router: Router) {
 
   }
-
+  
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     if (this.auth.isAdmin()) {return true ; } else { }
   }
@@ -44,4 +44,3 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     return true;
   }
 }
-/*ajouter a app.routing*/

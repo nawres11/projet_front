@@ -11,15 +11,16 @@ import {CreateOpeningRequestComponent} from './BACK-OFFICE/gestion-flux/create-o
 import {OpeningRequestComponent} from './BACK-OFFICE/gestion-flux/opening-request/opening-request.component';
 import {BACKOFFICEComponent} from './BACK-OFFICE/back-Nav/back-office.component';
 import {DashbordComponent} from './BACK-OFFICE/dashbord/dashbord.component';
-
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   
   {path : '', component: RegisterLoginComponent},
   {path :'Login', component: RegisterLoginComponent},
-  {path : 'user/ServerList', component: ServerListComponent},
   {path : 'admin', component: DashbordComponent},
   {path : 'user', component: DashbordComponent},
+  {path : 'user/ServerList', component: ServerListComponent},
+  {path : 'user/details/:id', component: ServerDetailsComponent},
   {path : 'admin/ServerList', component: ServerListComponent},
   {path : 'admin/addServer', component: CreateServerComponent},
   {path : 'admin/update/:id', component: UpdateComponent},
@@ -29,9 +30,11 @@ const routes: Routes = [
   {path : 'admin/FluxList', component: FluxListComponent},
   {path : 'admin/addFlux', component: CreateOpeningRequestComponent},
   {path : 'admin/validate', component: OpeningRequestComponent},
-  {path : 'admin/dashboard', component:DashbordComponent },
+  {path : 'admin/dashboard', component:DashbordComponent}
 
 ];
+/*canActivate:[AuthGuard],data:{ expectedRole:"USER"}
+canActivate:[AuthGuard],data:{ expectedRole:"ADMIN"*/
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

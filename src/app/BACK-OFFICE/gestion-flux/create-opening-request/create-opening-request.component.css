@@ -1,15 +1,15 @@
 #container{
-    width:700px;
+    width:850px;
     margin:0 auto;
     margin-top:70px;
-
+ 
 }
 form {
     margin-top:70px;
     width:100%;
     padding: 30px;
     border: 1px solid #f1f1f1;
-    background: #fff;
+    background: rgba(189, 197, 197, 0.932);
 }
 #container h1{
     width: 60%;
@@ -26,11 +26,12 @@ input[type=text] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    background-color: white;
 }
 
 /* Set a style for all buttons */
 button{
-    background-color:rgb(12, 13, 20);
+    background-color:rgb(13, 138, 40);
     color: white;
     padding: 14px 20px;
     text-align: center;
@@ -39,3 +40,9 @@ button{
     width:80px;
     
 }
+.example-margin {
+    margin: 0 10px;
+  }
+
+
+  

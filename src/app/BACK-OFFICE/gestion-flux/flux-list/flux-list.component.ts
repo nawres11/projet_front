@@ -29,9 +29,10 @@ export class FluxListComponent implements OnInit {
     
   }
   reloadData() {
-
+    console.log(this.fluxs);
     this.flux = new Flux ();
     this.fluxs = this.fluxService.getFluxs();
+    
   }
  
   addFlux() {
@@ -40,6 +41,10 @@ export class FluxListComponent implements OnInit {
     this.router.navigate(['admin/addFlux']);
   }
 
+  validate() {
+    this.fluxService.getFluxs();
+    this.router.navigate(['admin/validate']);
+  }
   closeAdd() {
  
   this.showAddFlux = false;

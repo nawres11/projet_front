@@ -25,7 +25,9 @@ import { MaterialModule} from './material.module';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
 import { ShowHidePasswordModule} from 'ngx-show-hide-password';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatPassToggleVisibilityComponent, MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
+import { MatPaginatorModule } from '@angular/material';
 import { DialogComponent} from './FRONT-OFFICE/register-Login/dialog.component';
 import { BACKOFFICEComponent} from './BACK-OFFICE/back-Nav/back-office.component';
 import { ServerListComponent} from './BACK-OFFICE/gestion-server/server-list/server-list.component';
@@ -33,13 +35,10 @@ import { CreateServerComponent } from './BACK-OFFICE/gestion-server/create-serve
 import { ServerDetailsComponent } from './BACK-OFFICE/gestion-server/server-details/server-details.component';
 import { UpdateComponent } from './BACK-OFFICE/gestion-server/update/update.component';
 import { FluxListComponent } from './BACK-OFFICE/gestion-flux/flux-list/flux-list.component';
-import { CreateOpeningRequestComponent } from './BACK-OFFICE/gestion-flux/create-opening-request/create-opening-request.component';
-import { httpInterceptorProviders} from './services/auth/auth-interceptor';
 import { DashbordComponent } from './BACK-OFFICE/dashbord/dashbord.component';
 import { OpeningRequestComponent } from './BACK-OFFICE/gestion-flux/opening-request/opening-request.component';
-
-
-
+import { CreateOpeningRequestComponent } from './BACK-OFFICE/gestion-flux/create-opening-request/create-opening-request.component';
+import { httpInterceptorProviders} from './services/auth/auth-interceptor';
 
 
 
@@ -89,16 +88,19 @@ import { OpeningRequestComponent } from './BACK-OFFICE/gestion-flux/opening-requ
     FormsModule,
     HttpClientModule,
     MatNativeDateModule,
+    MatCheckboxModule,MatPaginatorModule,
     MaterialModule, MatDialogModule,
     
   ],
   entryComponents: [DialogComponent],
-  providers: [{
-    provide: RECAPTCHA_SETTINGS,
+  providers:[
+  {provide: RECAPTCHA_SETTINGS,
     useValue: {
       siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
     } as RecaptchaSettings,
   }, httpInterceptorProviders],
+
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
