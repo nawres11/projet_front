@@ -20,9 +20,9 @@ export class ServerDetailsComponent implements OnInit {
  }
  
  details(id:number):void{
-  this.id = this.route.snapshot.params['id'];
+  // this.id = this.route.snapshot.params['id'];
   this.serverService.getServertById(id).subscribe(data => {
-    console.log(data);
+    console.error("details ! ", data);
     this.server = data;
   }, error1 => console.log(error1));
 }

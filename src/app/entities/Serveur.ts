@@ -7,5 +7,6 @@ export class Serveur {
     type: string;
     projet: string;
     statut:string;
+    intitule_projet:string;
   }
   

@@ -19,24 +19,34 @@ export class CreateOpeningRequestComponent  {
   flux: Flux;
   submitted = false;
   id:number;
-  fluxs:Flux[];
-  fluxsList: Observable<any>;
-  constructor(private fluxService:FluxService, private router: Router) { }
+  fluxs:any = [];
+  fluxsList: Observable<Flux>;
+  constructor(private fluxService:FluxService, private router: Router) {
+    this.flux= new Flux();
+   }
 
+ 
   ngOnInit() {
     this.submitted = false;
-    this.flux= new Flux();
-   
+    //this.flux= new Flux();
   }
 
   save() {
     console.log(this.flux);
-    this.fluxService.createFlux(this.flux).subscribe(data => console.log("msg:",data), error1 => console.log(error1));
+    this.fluxService.createFlux(this.flux)
+      .subscribe(
+        data => console.log("msg:",data),
+        error1 => console.log(error1)
+      );
     this.flux= new Flux();
-    this.fluxService.getFluxs();
-    this.router.navigate(['admin/FluxList']);
+    this.goToList();
   } 
 
+
+goToList() {
+  this.fluxService.getFluxs();
+  this.router.navigate(['admin/FluxList']);
+}
 closeThis() {
   this.submitted = true;
   this.save();
@@ -45,3 +55,7 @@ closeThis() {
   
 
 }
+
+
+
+

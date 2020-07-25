@@ -15,6 +15,8 @@ export class FluxService {
     return this.http.get(`${this.baseUrl}`);
   }
   createFlux(flux: object): Observable<object> {
+    console.log('flux=  ', flux);
+    
     return this.http.post(`${this.baseUrl}`,flux);
   }
   getServersList(): Observable<any> {

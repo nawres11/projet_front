@@ -69,17 +69,7 @@
       </table>
     </div>
     <br> <br>
-    <!--pagination-->
-
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
-  
    
-    <div *ngIf="showAddFlux" class="formStyleContainer">
-      <div class="formStyle" >
-      <app-create-opening-request (closeAll)="closeAddFromAdd($event)"></app-create-opening-request>
-        <button style="margin-left: 20%;margin-top:-13%;float:bottom" class="btn btn-dribbble" (click)="closeAdd()">Cancel</button>
-      </div>
-    </div>
   </div>
   <br/><br> <br><br/>
   <app-footer></app-footer>
