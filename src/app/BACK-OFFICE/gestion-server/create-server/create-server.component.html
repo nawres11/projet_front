@@ -1,13 +1,13 @@
 <app-back-office></app-back-office>
-<div id="container">
-
+ <div id="container">
 
   <div [hidden]="submitted">
-    <form #myForm="ngForm" (ngSubmit)="closeThis()" *ngIf="server">
+    <form #myForm="ngForm" [formGroup]="createForm" (ngSubmit)="closeThis()" *ngIf="server">
       <h1>Création d'un serveur</h1>
+
       <div class="form-group">
         <label for="id">ID</label>
-        <input type="number" class="form-control" placeholder="Entrer l'id du serveur..."  [(ngModel)]="server.id_serveur" id="id" required name="id">
+        <input type="number" class="form-control" placeholder="Entrer l'id du serveur..."  [(ngModel)]="server.id_serveur" id="id" required name="id" *ngIf="createForm.get('id').hasError('required')">
       </div>
 
       <div class="form-group">
@@ -65,4 +65,107 @@
 
   <br /><br>
   <app-footer></app-footer>
-</div>
+ </div>
+  
+ <!--<form [formGroup]="createForm"  (ngSubmit)="closeThis()" *ngIf="server">
+    <h1>Création d'un serveur</h1>
+    
+      <table align="center" >
+        <tr>
+          <mat-form-field appearance="outline">
+           <td><label>Id</label></td>
+           <td><input matInput
+                     id="id"
+                     type="number"
+                     #id
+                     required
+                     placeholder="Id"
+                     formControlName="id" [(ngModel)]="server.id_serveur" >
+              <mat-error *ngIf="createForm.get('id').hasError('required')">ID required</mat-error>
+             </td>
+            </mat-form-field>
+         
+        </tr>
+        <tr>
+          
+            <mat-form-field appearance="outline">
+              <td> <label>Intitule </label></td>
+              <td><input matInput
+                     
+                     id="intitule"
+                     type="text"
+                     #intitule
+                     required
+                     placeholder="Intitule"
+                     formControlName="intitule" [(ngModel)]="server.intitule"
+              >
+              <mat-error *ngIf="createForm.get('intitule').hasError('required')">intitule required</mat-error>
+            </td>
+            </mat-form-field>
+         
+        </tr>
+        <tr>
+          
+            <mat-form-field appearance="outline">
+              <td><label>Port</label></td>
+              <td><input matInput
+                     id="port"
+                     type="number"
+                     #port
+                     required
+                     placeholder="port"
+                     formControlName="port" [(ngModel)]="server.port" >
+              <mat-error *ngIf="createForm.get('port').hasError('required')">port required</mat-error>
+          </td>
+            </mat-form-field>
+          
+        </tr>
+        <tr>
+          
+            <mat-form-field appearance="outline">
+              <td> <label>URL</label></td>
+              <td><input matInput
+                    type="url"
+                     id="url"
+                     #url
+                     required
+                     placeholder="url"
+                     formControlName="url" [(ngModel)]="server.url" >
+              <mat-error *ngIf="createForm.get('url').hasError('required')">url required</mat-error>
+            </td>
+          </mat-form-field>
+          
+        </tr>
+        <tr>
+         
+           <td><label>Type</label></td>
+           <td> <mat-button-toggle-group formControlName="Type" appearance="outline" [(ngModel)]="server.type" name="fontStyle" aria-label="Font Style">
+             <mat-button-toggle value="interne" >Interne</mat-button-toggle>
+             <mat-button-toggle value="externe" >Externe</mat-button-toggle>
+            </mat-button-toggle-group>
+          </td>
+     
+        </tr>
+        <tr>
+          <td>
+            <label>Statut</label></td>
+            <td>
+            <mat-button-toggle-group formControlName="Statut" appearance="outline" [(ngModel)]="server.statut" name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle value="entrant" >entrant</mat-button-toggle>
+              <mat-button-toggle value="sortant" >sortant</mat-button-toggle>
+            </mat-button-toggle-group>
+
+          </td>
+        </tr>
+
+
+        <tr>
+          <td align="center">
+            <button type="submit" class="btn btn-success" ><span class="glyphicon glyphicon-plus"></span>Ajouter</button>
+          </td>
+        </tr>
+
+      </table>
+  </form>
+</div>-->
+ 

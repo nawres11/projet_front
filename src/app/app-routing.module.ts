@@ -14,9 +14,9 @@ import {DashbordComponent} from './BACK-OFFICE/dashbord/dashbord.component';
 import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
-  
-  {path : '', component: RegisterLoginComponent},
-  {path :'Login', component: RegisterLoginComponent},
+  {path : '' , component: HomeComponent},
+  {path : 'Register',component:RegisterLoginComponent},
+  {path : 'Login', component: RegisterLoginComponent},
   {path : 'admin', component: DashbordComponent},
   {path : 'user', component: DashbordComponent},
   {path : 'user/ServerList', component: ServerListComponent},

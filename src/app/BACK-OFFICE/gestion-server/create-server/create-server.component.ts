@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServerService } from '../../../services/server/server.service';
 import { Serveur } from '../../../entities/Serveur';
 import { Observable } from 'rxjs';
@@ -16,17 +17,35 @@ export class CreateServerComponent implements OnInit {
   server: Serveur;
   submitted = false;
   servers: any = [];
+  createForm: FormGroup;
   serversList: Observable<any>;
-  projet: Projet;
-  constructor(private serverService: ServerService, private router: Router) {
+  selectedProject:Projet;
+  projectsList: Observable<any>;
+
+  constructor(private formBuilder: FormBuilder,private serverService: ServerService, private router: Router) {
     this.server = new Serveur();
   }
  
   ngOnInit() {
     this.submitted = false;
-  }
+    this.createForm = this.formBuilder.group({
+      id: [this.server.id_serveur, [Validators.required]],
+      intitule: [this.server.intitule, [Validators.required,Validators.maxLength(10)]],
+      type: [this.server.type, [Validators.requiredTrue]],
+      statut: [this.server.statut, [Validators.requiredTrue]],
+      url: [this.server.url, [Validators.required,Validators.pattern]],
+      port: [this.server.port, [
+        Validators.required,
+        Validators.maxLength(4)
+      ]],
+     
+  });
+}
+ get f() { return this.createForm.controls; }
+
   save() {
 
+    //this.serverService.createServer(this.server,this.server.Productcategory.idCategory
     this.serverService.createServer(this.server)
       .subscribe(
         data => console.log("server ", data),
@@ -35,7 +54,7 @@ export class CreateServerComponent implements OnInit {
     this.server = new Serveur();
     this.goToList();
   }
-
+  
   closeThis() {
     this.submitted = true;
     this.save();
